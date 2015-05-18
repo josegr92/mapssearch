@@ -7,6 +7,14 @@ import requests
 def principal():
 	return template("index.tpl")
 
+@route('/busqueda',method='POST')
+def localizacion():
+	ubi=request.forms.get('ubicacion')
+	url_base="https://maps.googleapis.com/maps/api/"
+	dict={"address":ubi,"sensor":"false"}
+	
+	r=requests.get(url_base+"geocode/xml",params=dict)
+
 
 @route('/static/<filepath:path>')
 def server_static(filepath):
