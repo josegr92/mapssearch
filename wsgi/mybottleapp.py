@@ -15,6 +15,11 @@ def localizacion():
 	
 	r=requests.get(url_base+"geocode/xml",params=dict)
 
+	if r.status_code == 200:
+		doc=etree.fromstring(r.text.encode("utf-8"))
+		latitud=doc.find("geometry/location/lat")
+		longitud=doc.find("geometry/location/lng")
+
 
 @route('/static/<filepath:path>')
 def server_static(filepath):
