@@ -18,7 +18,7 @@ def localizacion():
 	if r.status_code == 200:
 		doc=etree.fromstring(r.text.encode("utf-8"))
 		latitud=doc.find("result/geometry/location/lat").text
-		longitud=doc.find("result/geometry/location/lng")
+		longitud=doc.find("result/geometry/location/lng").text
 	return template("localizacion.tpl",lat=latitud,lon=longitud)
 
 @route('/static/<filepath:path>')
