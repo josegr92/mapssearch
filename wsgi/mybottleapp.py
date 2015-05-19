@@ -12,6 +12,7 @@ def localizacion():
 	clave="AIzaSyAGPVr0-l9x0Lowgw8e39Ett8fNpuTTxI0"
 	ubi=request.forms.get('ubicacion')
 	lug=request.forms.get('lugar')
+	radio=request.forms.get('radio')
 	url_base="https://maps.googleapis.com/maps/api/"
 	dict={"address":ubi,"sensor":"false"}
 	
@@ -22,7 +23,7 @@ def localizacion():
 		latitud=doc.find("result/geometry/location/lat").text
 		longitud=doc.find("result/geometry/location/lng").text
 		lat_long=str(latitud)+","+str(longitud)
-		dict2={"location":lat_long,"language":"es","radius":"3000","types":lug,"sensor":"false","key":clave}
+		dict2={"location":lat_long,"language":"es","radius":radio,"types":lug,"sensor":"false","key":clave}
 		r2=requests.get(url_base+"place/nearbysearch/xml",params=dict2)
 
 		if r2.status_code == 200:
