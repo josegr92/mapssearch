@@ -9,7 +9,7 @@
 				<option value="movie_theater">Cine</option>
 				<option value="hospital">Hospital</option>
 				<option value="police">Policia</option>
-		Radio: <input name="radio" type="text" /></br>
 			</select></br>
+		Radio: <input name="radio" type="text" /></br>
 		<input value="Enviar" type="submit" />
 	</form>
