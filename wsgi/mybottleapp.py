@@ -9,6 +9,7 @@ def principal():
 
 @route('/busqueda',method='POST')
 def localizacion():
+	clave="AIzaSyAGPVr0-l9x0Lowgw8e39Ett8fNpuTTxI0"
 	ubi=request.forms.get('ubicacion')
 	url_base="https://maps.googleapis.com/maps/api/"
 	dict={"address":ubi,"sensor":"false"}
@@ -19,7 +20,12 @@ def localizacion():
 		doc=etree.fromstring(r.text.encode("utf-8"))
 		latitud=doc.find("result/geometry/location/lat").text
 		longitud=doc.find("result/geometry/location/lng").text
-	return template("localizacion.tpl",lat=latitud,lon=longitud)
+		lat_long=str(latitud)+","+str(longitud)
+		dict2={"location":lat_long,"language":"es","radius":"3000","types":lug,"sensor":"false","key":clave}
+		r2=requests.get(url_base+"place/nearbysearch/xml",params=dict2)
+
+	return template("localizacion.tpl",lat=r2.url)
+
 
 @route('/static/<filepath:path>')
 def server_static(filepath):
