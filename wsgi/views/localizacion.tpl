@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <style type="text/css">
-    #mapa { height: 500px; }
+    #mapa { height: 100%; margin: 0; padding: 0;}
     </style>
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <script type="text/javascript">
