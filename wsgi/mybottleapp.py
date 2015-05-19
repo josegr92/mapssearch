@@ -22,7 +22,7 @@ def localizacion():
 		latitud=doc.find("result/geometry/location/lat").text
 		longitud=doc.find("result/geometry/location/lng").text
 		lat_long=str(latitud)+","+str(longitud)
-		dict2={"location":lat_long,"language":"es","radius":"3000","types":"restaurant","sensor":"false","key":clave}
+		dict2={"location":lat_long,"language":"es","radius":"3000","types":lug,"sensor":"false","key":clave}
 		r2=requests.get(url_base+"place/nearbysearch/xml",params=dict2)
 
 	return template("localizacion.tpl",lat=r2.url)
