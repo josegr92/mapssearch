@@ -25,7 +25,20 @@ def localizacion():
 		dict2={"location":lat_long,"language":"es","radius":"3000","types":lug,"sensor":"false","key":clave}
 		r2=requests.get(url_base+"place/nearbysearch/xml",params=dict2)
 
-	return template("localizacion.tpl",lat=r2.url)
+		if r2.status_code == 200:
+			doc2=etree.fromstring(r2.text.encode("utf-8"))
+			resultados=doc2.findall("result")
+			localizacion=[]
+			for resultado in resultados:
+				loc=[]
+				latitud2=float(resultado.find("geometry/location/lat").text)
+				longitud2=float(resultado.find("geometry/location/lng").text)
+				loc.append(nombre.encode("utf-8"))
+				loc.append(latitud2)
+				loc.append(longitud2)
+				localizacion.append(loc)
+
+	return template("localizacion.tpl",lat=localizacion)
 
 
 @route('/static/<filepath:path>')
