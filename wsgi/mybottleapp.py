@@ -39,8 +39,7 @@ def localizacion():
 				loc.append(longitud2)
 				localizacion.append(loc)
 
-	return template("localizacion.tpl",lat=localizacion)
-
+	return template("localizacion.tpl",lat=float(latitud) ,lon=float(longitud),loc=localizacion)
 
 @route('/static/<filepath:path>')
 def server_static(filepath):
