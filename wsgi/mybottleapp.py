@@ -11,6 +11,7 @@ def principal():
 def localizacion():
 	clave="AIzaSyAGPVr0-l9x0Lowgw8e39Ett8fNpuTTxI0"
 	ubi=request.forms.get('ubicacion')
+	lug=request.forms.get('lugar')
 	url_base="https://maps.googleapis.com/maps/api/"
 	dict={"address":ubi,"sensor":"false"}
 	
