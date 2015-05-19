@@ -11,7 +11,7 @@
     function initialize() {
       var marcadores = {{!loc}};
       var map = new google.maps.Map(document.getElementById('mapa'), {
-        zoom: 7,
+        zoom: 12,
         center: new google.maps.LatLng({{lat}}, {{lon}}),
         mapTypeId: google.maps.MapTypeId.ROADMAP
       });
