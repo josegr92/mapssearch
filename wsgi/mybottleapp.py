@@ -35,7 +35,7 @@ def localizacion():
 				nombre=resultado.find("name").text
 				latitud2=float(resultado.find("geometry/location/lat").text)
 				longitud2=float(resultado.find("geometry/location/lng").text)
-				loc.append(nombre.encode("utf-8"))
+				loc.append(nombre.encode("latin1"))
 				loc.append(latitud2)
 				loc.append(longitud2)
 				localizacion.append(loc)
