@@ -2,6 +2,7 @@
 <!doctype html>
 <html lang="es">
   <head>
+  	<title>Localización</title>
     <meta charset="UTF-8">
     <style type="text/css">
     *{ margin: 0; padding: 0; }
