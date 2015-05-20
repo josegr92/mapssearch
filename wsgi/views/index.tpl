@@ -54,7 +54,7 @@
 								<option value="hospital">Hospital</option>
 								<option value="police">Policia</option>
 							</select></br>
-							Radio: <input name="radio" type="text" /></br>
+							Radio (en metros): <input name="radio" type="text" /></br>
 							<input value="Enviar" type="submit" />
 						</form>
 					</div>
@@ -66,9 +66,9 @@
 				<div class="container">
 					<div class="8u 12u$(medium)">
 						<ul class="copyright">
-							<li>&copy; Untitled. All rights reserved.</li>
-							<li><a href="index.tpl">HOME</a></li>
-							<li>Images: <a href="http://unsplash.com">Unsplash</a></li>
+							<li>&copy; Maps Search</li>
+							<li><a href="#banner">Iincio</a></li>
+							<li><a href="#one">Buscador</a></li>
 						</ul>
 					</div>
 					</div>
