@@ -12,10 +12,10 @@
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
 		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
-		<script src="../static/js/jquery.min.js"></script>
-		<script src="../static/js/skel.min.js"></script>
-		<script src="../static/js/skel-layers.min.js"></script>
-		<script src="../static/js/init.js"></script>
+		<script src="/static/js/jquery.min.js"></script>
+		<script src="/static/js/skel.min.js"></script>
+		<script src="/static/js/skel-layers.min.js"></script>
+		<script src="/static/js/init.js"></script>
 		
 			<link rel="stylesheet" href="/static/css/skel.css" />
 			<link rel="stylesheet" href="/static/css/style.css" />
