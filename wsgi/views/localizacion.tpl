@@ -39,6 +39,7 @@
     </script>
   </head>
   <body>
+    <div>Hola</div>
     <div id="mapa"></div>
   </body>
 </html>
