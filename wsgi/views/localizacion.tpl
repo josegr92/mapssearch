@@ -38,8 +38,6 @@
     google.maps.event.addDomListener(window, 'load', initialize);
     </script>
   </head>
-  <body>
-    <div>Hola</div>
-    <div id="mapa"></div>
+      <div id="mapa"></div>
   </body>
 </html>
